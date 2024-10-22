@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buddies</title>
+</head>
+<body>
+<h1> Buddies </h1>
+<ul th:each="buddy: ${buddies}">
+    <li> <a th:text="|${buddy.getName()} (${buddy.getPhoneNumber()})|"/> </li>
+</ul>
+</body>
+</html>

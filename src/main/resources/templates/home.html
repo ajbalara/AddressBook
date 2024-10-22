@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Address Books</title>
+</head>
+<body>
+<h1> Address Books </h1>
+<ul th:each="book: ${books}">
+    <li> <a th:text="|Book ${book.getId()}|" href = "buddies.html" th:href="|/home/${book.getId()}|"/> </li>
+</ul>
+</body>
+</html>

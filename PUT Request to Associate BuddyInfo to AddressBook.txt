@@ -1,0 +1,36 @@
+POST http://localhost:8080/addressBooks
+
+{}
+
+###
+POST http://localhost:8080/buddyInfoes
+Content-Type: application/json
+
+{
+  "name": "Jane Smith",
+  "phoneNumber": "613-123-4567"
+}
+
+###
+PUT http://localhost:8080/buddyInfoes/1/addressBook
+Content-Type: text/uri-list
+
+http://localhost:8080/addressBooks/1
+
+###
+POST http://localhost:8080/buddyInfoes
+Content-Type: application/json
+
+{
+  "name": "Steve Smith",
+  "phoneNumber": "613-123-4567"
+}
+
+###
+PUT http://localhost:8080/buddyInfoes/2/addressBook
+Content-Type: text/uri-list
+
+http://localhost:8080/addressBooks/1
+
+###
+DELETE http://localhost:8080/buddyInfoes/2/addressBook
