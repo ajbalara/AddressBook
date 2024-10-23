@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 public class AccessingDataJpaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AccessingDataJpaApplication.class);
+        SpringApplication.run(AccessingDataJpaApplication.class, args);
     }
 
     /*
