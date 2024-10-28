@@ -9,5 +9,8 @@
 <ul th:each="book: ${books}">
     <li> <a th:text="|Book ${book.getId()}|" href = "buddies.html" th:href="|/home/${book.getId()}|"/> </li>
 </ul>
+<form action="#" th:action="@{/home}" th:object="${books}" method="post">
+    <p><input type="submit" value="Create AddressBook" /></p>
+</form>
 </body>
 </html>

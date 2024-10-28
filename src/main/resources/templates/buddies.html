@@ -9,5 +9,12 @@
 <ul th:each="buddy: ${buddies}">
     <li> <a th:text="|${buddy.getName()} (${buddy.getPhoneNumber()})|"/> </li>
 </ul>
+<!--<form action="#" th:action="@{|/home/${id}|}" th:object="${newBuddy}" method="post">-->
+<form action="#" th:object="${newBuddy}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <p>Phone Number: <input type="text" th:field="*{phoneNumber}" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+</form>
+<a th:text="|Go back home|" href = "home.html" th:href="|/home|"/>
 </body>
 </html>
